@@ -31,6 +31,8 @@ IMEI_CHECK_API_URL = "https://api.imeicheck.net/v1/"
 REDIS_URL = "redis://redis:6379"
 BACKEND_URL = "backend"
 ```
+В bot/whitelist.py добавьте нужные telegram ID для доступа к боту
+
 3. Запуск docker-compose:
    ```
    docker-compose up --build
