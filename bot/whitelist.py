@@ -1,2 +1,2 @@
-whitelist = [302166180]
+whitelist = []
 
