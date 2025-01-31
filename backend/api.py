@@ -20,8 +20,9 @@ async def check_imei(request: Request, data: IMEIRequest) -> dict:
     Проверка IMEI через внешний API
     """
     imei: str = data.imei
-    token: str = IMEI_CHECK_API_TOKEN
+    token: str = data.token or IMEI_CHECK_API_TOKEN
     url: str = IMEI_CHECK_API_URL + "checks"
+    print(token)
 
     if not validate_imei(imei):
         raise HTTPException(status_code=400, detail='Invalid IMEI format')

@@ -45,7 +45,7 @@ async def check_imei(message: types.Message) -> None:
         return
     
     async with aiohttp.ClientSession() as session:
-        async with session.post(f'http://{BACKEND_URL}:8000/api/check-imei', json={'imei': imei}) as response:
+        async with session.post(f'http://{BACKEND_URL}:8000/api/check-imei', json={'imei': imei, 'token': ""}) as response:
             if response.status == 200:
                 data = await response.json()
                 str_data = format_response(data, imei)
