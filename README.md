@@ -45,7 +45,10 @@ BACKEND_URL = "backend"
 ```
 curl -X POST http://localhost:8000/api/check-imei \
      -H "Content-Type: application/json" \
-     -d '{"imei": "356735111052198"}'
+     -d '{
+           "imei": "356735111052198",
+           "token": "your_imei_check_api_token"
+         }'
 ```
 ### Получение списка доступных сервисов
 - URL: /api/get-services
